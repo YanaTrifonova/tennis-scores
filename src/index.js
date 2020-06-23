@@ -1,13 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { ApolloProvider } from '@apollo/react-hooks';
-import ApolloClient from 'apollo-boost';
+import React from "react";
+import ReactDOM from "react-dom";
+import { ApolloProvider } from "@apollo/react-hooks";
+import ApolloClient from "apollo-boost";
+
+import "./index.css";
+
+import App from "./App";
 
 // Your GraphQL Endpoint here
 const client = new ApolloClient({
-  uri: 'https://somethingsomething.herokuapp.com/v1/graphql',
+  uri: "https://somethingsomething.herokuapp.com/v1/graphql",
 });
 
 ReactDOM.render(
@@ -16,5 +18,5 @@ ReactDOM.render(
       <App />
     </ApolloProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

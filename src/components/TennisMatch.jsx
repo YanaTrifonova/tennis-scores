@@ -1,41 +1,42 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableRow from '@material-ui/core/TableRow';
-import { makeStyles } from '@material-ui/core/styles';
-import { Typography, Grid } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import Box from '@material-ui/core/Box';
-import Moment from 'react-moment';
-import 'moment-timezone';
-import SetScores from './SetScores';
+import React from "react";
+import Moment from "react-moment";
+import "moment-timezone";
+import Table from "@material-ui/core/Table";
+import TableBody from "@material-ui/core/TableBody";
+import TableCell from "@material-ui/core/TableCell";
+import TableRow from "@material-ui/core/TableRow";
+import { makeStyles } from "@material-ui/core/styles";
+import { Typography, Grid } from "@material-ui/core";
+import Card from "@material-ui/core/Card";
+import Box from "@material-ui/core/Box";
+
+import SetScores from "./SetScores";
 
 const useStyles = makeStyles((theme) => ({
   header: {
     color: theme.palette.getContrastText(theme.palette.primary.dark),
     padding: 0,
-    textAlign: 'right',
+    textAlign: "right",
   },
   winner: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   loser: {
-    fontWeight: 'normal',
+    fontWeight: "normal",
   },
   time: {
-    fontSize: '75%',
-    marginBottom: '1em',
+    fontSize: "75%",
+    marginBottom: "1em",
     paddingLeft: theme.spacing(2),
   },
   player: {
-    borderBottom: 'none',
-    width: '61%',
-    textAlign: 'left',
+    borderBottom: "none",
+    width: "61%",
+    textAlign: "left",
   },
   box: {
-    marginBottom: '2em',
+    marginBottom: "2em",
   },
 }));
 
@@ -49,7 +50,7 @@ const TennisMatch = ({ match }) => {
       <Card square>
         <Grid container direction="row" spacing={0} alignItems="stretch">
           <Grid item></Grid>
-          <Grid item style={{ display: 'flex' }}>
+          <Grid item style={{ display: "flex" }}>
             <Grid
               container
               direction="column"
@@ -77,7 +78,7 @@ const TennisMatch = ({ match }) => {
               <TableCell className={classes.player}>
                 <span
                   className={
-                    winnerRef === 'p1' ? classes.winner : classes.loser
+                    winnerRef === "p1" ? classes.winner : classes.loser
                   }
                 >
                   {p1.name}
@@ -89,7 +90,7 @@ const TennisMatch = ({ match }) => {
               <TableCell className={classes.player}>
                 <span
                   className={
-                    winnerRef === 'p2' ? classes.winner : classes.loser
+                    winnerRef === "p2" ? classes.winner : classes.loser
                   }
                 >
                   {p2.name}
