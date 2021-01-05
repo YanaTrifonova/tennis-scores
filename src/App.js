@@ -23,6 +23,8 @@ function App() {
       <CssBaseline />
       <Box>
         <MatchList />
+        {/*<SetScores />*/}
+        {/*<TennisMatch />*/}
       </Box>
     </Container>
   );
