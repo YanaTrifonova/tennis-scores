@@ -25,6 +25,8 @@ function MatchList() {
         Error! ${error.message}
       </p>
     );
+  //
+  // debugger;
 
   return (
     <Container className={classes.root}>
@@ -34,6 +36,27 @@ function MatchList() {
           <article key={match.id}>
             <p>Match ID: {match.id}</p>
             <p>Match date: {match.started_at}</p>
+              <table>
+                  <tr>
+                      <th>Players</th>
+                      {match.setts?.map((sett, index) => {
+                          return <th key={index}>set {index + 1}</th>
+                      })}
+                  </tr>
+                  <tr>
+                      <th>{match.p1.name}</th>
+                      {match.setts?.map((sett, index) => {
+                          return <th key={index}>{sett.p1_score}</th>
+                      })}
+                  </tr>
+                  <tr>
+                      <th>{match.p2.name}</th>
+                      {match.setts?.map((sett, index) => {
+                          return <th key={index}>{sett.p2_score}</th>
+                      })}
+                  </tr>
+              </table>
+            <p>Winner: {match.winner?.name}</p>
             <hr />
           </article>
         ))}
