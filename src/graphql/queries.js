@@ -26,7 +26,7 @@ export const GET_ALL_MATCHES = gql`
 
 export const PLAYED_MATCHES = gql`
 query played {
-    matches(order_by: {id: desc}, where: {finished: {_eq: true}}, limit: 5) {
+    matches(order_by: {started_at: asc}, where: {finished: {_eq: true}}, limit: 15) {
         id
           started_at
           winner {
