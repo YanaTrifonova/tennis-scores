@@ -57,7 +57,7 @@ function MatchList() {
         },
     }))(TableRow);
 
-     if (playedMatchesLoading || matchesInProgressLoading) return "Loading...";
+    if (playedMatchesLoading || matchesInProgressLoading) return "Loading...";
     if (playedMatchesError)
         return (
             <p>
@@ -73,8 +73,6 @@ function MatchList() {
                 Error! ${matchesInProgressError.message}
             </p>
         );
-
-     //debugger;
 
     return (
         <>
@@ -165,8 +163,6 @@ function MatchList() {
                     ))}
                 </Box>
             </Container>
-
-
         </>
     );
 }
